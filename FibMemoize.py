@@ -15,12 +15,12 @@ def fib(n):
     if n == 1 or n == 2:
         answer = 1
     else:
-        answer = n * fib(n - 1)
+        answer = fib(n - 2) + fib(n - 1)
     return answer
 
 if __name__ == '__main__':
-    # assert fib(7) == 13
-    for i in range(1, 1000):
+    assert fib(7) == 13
+    for i in range(1, 50):
         print(i, ":", fib(i))
     fib(-1)
     fib("one")
